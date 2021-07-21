@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MoviesFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#003366"
+        android:scaleType="centerInside"
+        android:src="@drawable/videoicon" />
+
+    <Button
+        android:id="@+id/popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular"
+        android:textColor="#003366"
+        android:textSize="15sp"
+        android:background="#ffffff"
+        android:layout_below="@+id/image"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="30dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/topRated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top Rated"
+        android:textColor="#003366"
+        android:background="#ffffff"
+        android:textSize="15sp"
+        android:layout_below="@+id/image"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_toEndOf="@+id/popular"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/favourites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favourites"
+        android:textColor="#003366"
+        android:background="#ffffff"
+        android:textSize="15sp"
+        android:layout_below="@+id/image"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_toEndOf="@+id/topRated"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movieRecyclerView"
+        android:layout_below="@+id/popular"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
