@@ -11,6 +11,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
        SplashScreenFragment splashScreen = new SplashScreenFragment();
-       getSupportFragmentManager().beginTransaction().add(R.id.mainScreen, splashScreen).commit();
+       //getSupportFragmentManager().beginTransaction().add(R.id.mainScreen, splashScreen).commit();
     }
 }
