@@ -65,7 +65,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieViewHolder> {
                 fragment.setArguments(bundle);
 
                 FragmentTransaction transaction = ((AppCompatActivity)ctx).getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.mainScreen, fragment).commit();
+                transaction.replace(R.id.mainScreen, fragment).addToBackStack("moviesfragment").commit();
             }
         });
 

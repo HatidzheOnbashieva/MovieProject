@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
@@ -32,6 +33,7 @@ public class MoviesInfoFragment extends Fragment {
                              Bundle savedInstanceState) {
 
       View v = inflater.inflate(R.layout.fragment_movies_info, container, false);
+
 
         backButton = v.findViewById(R.id.back);
         poster = v.findViewById(R.id.moviePoster);
@@ -62,9 +64,12 @@ public class MoviesInfoFragment extends Fragment {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                MoviesFragment moviesFragment = new MoviesFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.mainScreen, moviesFragment).commit();
+                //MoviesFragment moviesFragment = new MoviesFragment();
+                //FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                //transaction.replace(R.id.mainScreen, moviesFragment).commit();
+                if (getFragmentManager() != null) {
+                    getFragmentManager().popBackStack();
+                }
             }
         });
 

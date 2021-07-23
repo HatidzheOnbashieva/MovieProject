@@ -3,6 +3,7 @@ package com.example.movietestproject.ViewModel;
 import android.content.Context;
 import android.widget.Toast;
 
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -21,6 +22,7 @@ public class MoviesInfoFragmentViewModel extends ViewModel {
     {
         moviesList = new MutableLiveData<>();
         dbConnection = DataBaseConnectivity.getDBInstance(context);
+        
     }
 
 

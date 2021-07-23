@@ -5,7 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/mainScreen"/>
+    android:id="@+id/mainScreen">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#003366"
+        android:scaleType="centerInside"
+        android:src="@drawable/videoicon" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/popular"
+            android:text="Popular" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/topRated"
+            android:text="Top rated" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/favourites"
+            android:text="Favourites" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_marginTop="210dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>
+
+
 
 
 
