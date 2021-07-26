@@ -29,11 +29,11 @@ public class TopRatedFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_popular, container, false);
-        recyclerView = v.findViewById(R.id.movieRecyclerView);
-
+        View v = inflater.inflate(R.layout.fragment_top_rated, container, false);
+        recyclerView = v.findViewById(R.id.movieRecyclerViewTopRated);
         context = getActivity().getApplicationContext();
         moviesFragmentViewModel = new MoviesFragmentViewModel(context);
+        //moviesFragmentViewModel = ViewModelProviders.of(this).get(MoviesFragmentViewModel.class);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
 
@@ -49,4 +49,5 @@ public class TopRatedFragment extends Fragment {
 
         return v;
     }
+
 }

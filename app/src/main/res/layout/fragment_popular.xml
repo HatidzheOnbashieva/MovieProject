@@ -6,8 +6,7 @@
     tools:context=".PopularFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/movieRecyclerView"
-        android:layout_below="@+id/popular"
+        android:id="@+id/movieRecyclerViewPopular"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

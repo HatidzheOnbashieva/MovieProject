@@ -30,14 +30,13 @@ public class FavouritesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_popular, container, false);
-        recyclerView = v.findViewById(R.id.movieRecyclerView);
+        View v = inflater.inflate(R.layout.fragment_favourites, container, false);
+        recyclerView = v.findViewById(R.id.movieRecyclerViewFavourites);
 
         context = getActivity().getApplicationContext();
         moviesFragmentViewModel = new MoviesFragmentViewModel(context);
+        //moviesFragmentViewModel = ViewModelProviders.of(this).get(MoviesFragmentViewModel.class);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-
-
 
         moviesFragmentViewModel.makeLocalDBCall();
         moviesFragmentViewModel.getMovies().observe(getActivity(), new Observer<List<Movie>>() {
@@ -50,4 +49,5 @@ public class FavouritesFragment extends Fragment {
 
         return v;
     }
+
 }

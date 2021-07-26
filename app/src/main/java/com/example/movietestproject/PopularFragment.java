@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.example.movietestproject.Adapter.MovieAdapter;
 import com.example.movietestproject.Model.Movie;
@@ -32,10 +31,11 @@ public class PopularFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_popular, container, false);
-        recyclerView = v.findViewById(R.id.movieRecyclerView);
+        recyclerView = v.findViewById(R.id.movieRecyclerViewPopular);
 
         context = getActivity().getApplicationContext();
         moviesFragmentViewModel = new MoviesFragmentViewModel(context);
+        //moviesFragmentViewModel = ViewModelProviders.of(this).get(MoviesFragmentViewModel.class);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
 
@@ -51,4 +51,5 @@ public class PopularFragment extends Fragment {
 
         return v;
     }
+
 }

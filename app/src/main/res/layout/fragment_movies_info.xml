@@ -31,6 +31,15 @@
             app:layout_constraintTop_toBottomOf="@id/back"
             tools:srcCompat="@tools:sample/avatars"/>
 
+
+        <ImageView
+            android:id="@+id/favourite"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_favorite_nofill"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
         <TextView
             android:id="@+id/movieTitle"
             android:layout_width="wrap_content"
@@ -38,6 +47,7 @@
             android:textSize="25sp"
             android:textColor="#003366"
             android:text="Example Title Here"
+            android:textAlignment="center"
             android:layout_below="@+id/moviePoster"
             android:layout_marginTop="10dp"
             android:layout_centerInParent="true"
@@ -136,18 +146,7 @@
             app:layout_constraintStart_toStartOf="@id/releaseDate"
             app:layout_constraintEnd_toEndOf="@id/releaseDate"/>
 
-        <ImageView
-            android:id="@+id/favourite"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentRight="true"
-            app:layout_constraintEnd_toEndOf="@id/movieTitle"
-            app:layout_constraintTop_toBottomOf="@id/movieTitle"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/ic_favourite"
-            android:foregroundGravity="top" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 <!--</ScrollView>-->
